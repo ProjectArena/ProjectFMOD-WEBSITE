@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="donate.css">
+</head>
+<div class="logo">
+    <img src="logo.png" alt="Logo">
+<nav class="menu">
+  <button><a href="home.html">Home</a></button>
+    <button><a href="servers.html">Servers</a></button>
+    <button><a href="donate.html">Donate</a></button>
+<body>
+  <header>
+    <!-- ... Header content ... -->
+  </header>
+  <main>
+    <section class="donate-content">
+      <h1>Support Us!</h1>
+      <p>Help us keep the servers running by making a donation. Your contribution is greatly appreciated!</p>
+      <p>Choose an amount to donate:</p>
+      <form>
+        <input type="radio" name="donation" value="10">$10
+        <input type="radio" name="donation" value="20">$20
+        <input type="radio" name="donation" value="50">$50
+        <input type="radio" name="donation" value="100">$100
+        <br>
+        <button type="submit">Donate</button>
+      </form>
+    </section>
+    <section class="payment-content" id="paypal-section">
+      <h2>Pay with PayPal</h2>
+      <p>Click the button below to complete your donation through PayPal:</p>
+      <div id="paypal-button-container"></div>
+    </section>
+  </main>
+  <script src="https://www.paypal.com/sdk/js?client-id=ASVlh4b24daLUycjY4HMEY9qPCiOvc2i4pmhMN9Sotz1iA27FvN2NcwmAzZuZkpoV8Dw1zVzVzMLHU2m"></script>
+  <script>
+    // Mockup PayPal payment integration
+    paypal.Buttons({
+      createOrder: function(data, actions) {
+        // You would normally send the amount and other details to your server
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: '10' // Replace with the selected donation amount
+            }
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        // Handle approved payment
+        alert('Thank you for your donation!');
+      }
+    }).render('#paypal-button-container');
+  </script>
+</body>
+</html>

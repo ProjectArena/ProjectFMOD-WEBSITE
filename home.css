@@ -1,0 +1,91 @@
+/* Reset some default styles for the page */
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Define a black background color */
+body {
+  background-color: black;
+}
+
+/* Style headings with yellow color */
+h1, h2, h3 {
+  color: yellow;
+}
+
+/* Style paragraphs with orange color */
+p {
+  color: orange;
+}
+
+/* Style the header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: rgb(255, 115, 0);
+  padding: 10px 20px;
+}
+
+/* Style the logo */
+.logo img {
+  max-width: 100px;
+  height: auto;
+}
+
+/* Style the menu buttons */
+.menu button {
+  background-color: rgb(255, 145, 0);
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+/* Style the Discord link */
+.discord-link {
+  margin-left: auto;
+}
+
+.discord-link a {
+  color: orange;
+  text-decoration: none;
+}
+
+/* Change link color on hover */
+.discord-link a:hover {
+  color: #ffeb3b;
+}
+
+/* Add some additional styling for visual appeal */
+/* For example, centering content and adding padding */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Style links with a different shade of yellow */
+a {
+  color: #ffee58;
+  text-decoration: none;
+}
+
+/* Change link color on hover */
+a:hover {
+  color: #ffeb3b;
+}
+
+/* Set background image */
+body {
+  background-image: url('background.png'); /* Replace with your image URL */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

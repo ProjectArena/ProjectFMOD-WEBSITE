@@ -1,0 +1,83 @@
+/* Reset some default styles for the page */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set background to black and text color to white */
+  body {
+    background-color: black;
+    color: white;
+  }
+  
+  /* Style the header */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  /* Style the logo */
+  .logo img {
+    max-width: 100px;
+    height: auto;
+  }
+  
+  /* Style the menu buttons */
+  .menu button {
+    background-color: rgb(255, 145, 0);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  /* Style the Discord link */
+  .discord-link {
+    margin-left: auto;
+  }
+  
+  .discord-link a {
+    color: orange;
+    text-decoration: none;
+  }
+  
+  /* Change link color on hover */
+  .discord-link a:hover {
+    color: #ffeb3b;
+  }
+  
+  /* Style the server details */
+  .server-details {
+    padding: 20px;
+  }
+  
+  /* Style the server details section */
+  .server-details h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .server-details h2 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .server-details p {
+    margin-bottom: 20px;
+  }
+  
+  .server-details ul {
+    list-style-type: none;
+    margin-left: 0;
+  }
+  
+  .server-details li {
+    margin-bottom: 5px;
+  }
+  

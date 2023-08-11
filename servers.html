@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="server.css">
+  <script src="server.js"></script>
+  <script>
+    // Establish a connection to the server
+    const socket = io();
+
+    // Function to update player count
+    function updatePlayerCount(serverIP) {
+      socket.emit('getPlayerCount', serverIP);
+      socket.on('playerCount', (playerCount) => {
+        var playerCountElement = document.getElementById("player-count");
+        playerCountElement.textContent = playerCount;
+      });
+    }
+
+    // Call the function when the page loads
+    window.onload = function() {
+      // Replace 'YOUR_SERVER_IP' with the actual server IP or address
+      updatePlayerCount('mongodb://localhost:27017/matchmaker');
+    };
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+    <nav class="menu">
+      <button><a href="home.html">Home</a></button>
+      <button><a href="servers.html">Donate</a></button>
+      <button><a href="donate.html">Donate</a></button>
+    </nav>
+    <div class="discord-link">
+      <a href="https://discord.gg/9dkeRWpKAf">Join us on Discord</a>
+    </div>
+  </header>
+  <main>
+    <section class="server-details">
+      <h1>Server Details</h1>
+      <p>Welcome to the game server! Join us and experience exciting adventures.</p>
+      <h2>Server Information:</h2>
+      <ul>
+        <li>Server Name: Solo </li>
+        <li>Max Players: 100</li>
+        <li>Player Count: <span id="player-count">0</span> / 100</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
